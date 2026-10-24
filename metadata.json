@@ -1,0 +1,6 @@
+{
+  "name": "مدار - سامانه مدیریت پروژه و تسک‌های تیمی",
+  "description": "سامانه مدرن مدیریت پروژه، تسک‌های اسپرینت، تایم‌ترکر و ارتباطات تیمی با معماری پایگاه داده و کنترل دسترسی",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

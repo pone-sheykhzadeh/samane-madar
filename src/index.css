@@ -1,0 +1,198 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Vazirmatn', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-headline: 'Vazirmatn', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Vazirmatn', monospace;
+
+  --color-surface: #11131a;
+  --color-sidebar: #141620;
+  --color-card: #1b1e2a;
+  --color-card-border: #242838;
+  --color-card-inner: #232738;
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #11131a;
+}
+::-webkit-scrollbar-thumb {
+  background: #272c3d;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #394057;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}
+
+.active-nav-glow {
+  background: linear-gradient(135deg, #6c5ff7 0%, #7d70fa 100%);
+  box-shadow: 0 8px 24px -4px rgba(108, 95, 247, 0.4);
+}
+
+.custom-grid-lines {
+  background-size: calc(100% / 11) 100%;
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+/* ==========================================================================
+   LIGHT MODE STYLING (Active only when the user toggles the Light Mode switch)
+   ========================================================================== */
+html.light {
+  color-scheme: light;
+}
+
+html.light body,
+html.light #root {
+  background-color: #f8fafc !important;
+  color: #1e293b !important;
+}
+
+/* Light mode backgrounds */
+html.light .bg-\[\#11131a\],
+html.light .bg-\[\#111319\] {
+  background-color: #f8fafc !important;
+}
+
+html.light .bg-\[\#141620\] {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
+}
+
+html.light .bg-\[\#15171e\],
+html.light .bg-\[\#191b21\],
+html.light .bg-\[\#1b1e2a\] {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.05), 0 2px 4px -1px rgba(15, 23, 42, 0.03) !important;
+}
+
+html.light .bg-\[\#1b1e2b\],
+html.light .bg-\[\#1b1e27\],
+html.light .bg-\[\#1e1f25\],
+html.light .bg-\[\#0c0e13\],
+html.light .bg-\[\#20232c\] {
+  background-color: #f1f5f9 !important;
+  border-color: #e2e8f0 !important;
+}
+
+html.light .bg-\[\#232738\],
+html.light .bg-\[\#20232e\],
+html.light .bg-\[\#282a30\],
+html.light .bg-\[\#242838\] {
+  background-color: #e2e8f0 !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.light .border-\[\#1e2230\],
+html.light .border-\[\#1f2334\],
+html.light .border-\[\#20232e\],
+html.light .border-\[\#242838\],
+html.light .border-\[\#262b3a\],
+html.light .border-\[\#262b3c\],
+html.light .border-\[\#282a30\],
+html.light .border-\[\#1b1e2a\]\/50 {
+  border-color: #e2e8f0 !important;
+}
+
+/* Light mode text colors */
+html.light .text-white,
+html.light .text-\[\#e2e2e9\] {
+  color: #0f172a !important;
+}
+
+html.light .text-slate-200,
+html.light .text-slate-300 {
+  color: #1e293b !important;
+}
+
+html.light .text-slate-400 {
+  color: #475569 !important;
+}
+
+html.light .text-slate-500,
+html.light .text-\[\#8c94a8\],
+html.light .text-\[\#908fa0\],
+html.light .text-\[\#71788a\],
+html.light .text-\[\#6e7587\],
+html.light .text-\[\#6e748b\] {
+  color: #64748b !important;
+}
+
+/* Light mode inputs and form elements */
+html.light input,
+html.light textarea,
+html.light select {
+  color: #0f172a !important;
+  background-color: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Light mode hover states */
+html.light .hover\:bg-\[\#1a1d2b\]:hover,
+html.light .hover\:bg-\[\#1a1d2c\]:hover,
+html.light .hover\:bg-\[\#1e1f25\]:hover,
+html.light .hover\:bg-\[\#202430\]:hover,
+html.light .hover\:bg-\[\#282a30\]:hover {
+  background-color: #f1f5f9 !important;
+}
+
+/* Preserve bright/white text inside colored hero buttons and status blocks */
+html.light .bg-\[\#4a8df8\] .text-white,
+html.light .bg-\[\#ff4f8e\] .text-white,
+html.light .bg-\[\#8088ff\] .text-white,
+html.light .bg-gradient-to-r,
+html.light .bg-gradient-to-r span,
+html.light .bg-gradient-to-r svg,
+html.light .bg-\[\#6859f5\],
+html.light .bg-\[\#6859f5\] span,
+html.light .bg-\[\#6859f5\] svg,
+html.light .active-nav-glow,
+html.light .active-nav-glow span,
+html.light .active-nav-glow svg,
+html.light .text-blue-100,
+html.light .text-pink-100,
+html.light .text-indigo-100 {
+  color: #ffffff !important;
+}
+
+/* Time rail task card text */
+html.light [style*="background-color: #8183fe"] *,
+html.light [style*="background-color: #5094ff"] *,
+html.light [style*="background-color: #ff4f8e"] *,
+html.light [style*="background-color: #00c389"] * {
+  color: #ffffff !important;
+}
+
+/* Light mode custom grid lines */
+html.light .custom-grid-lines {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.05) 1px, transparent 1px) !important;
+}
+
+/* Light mode scrollbar */
+html.light ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+html.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
